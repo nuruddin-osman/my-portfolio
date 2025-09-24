@@ -72,7 +72,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="section bg-light-cream py-8 md:py-20">
+    <section id="skills" className="section bg-light-cream py-10 md:py-20">
       <div className="container mx-auto px-6">
         <motion.div data-aos="fade-up" className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-dark-blue mb-4">
