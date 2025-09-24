@@ -5,6 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import Skills from "@/components/Skills";
 
 export default function Home() {
   useEffect(() => {
@@ -19,6 +20,7 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
+      <Skills />
 
       {/* Footer */}
       <footer className="bg-dark-blue text-white py-8">
