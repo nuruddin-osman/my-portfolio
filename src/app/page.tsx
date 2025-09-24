@@ -8,6 +8,8 @@ import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import About from "@/components/About";
+import Education from "@/components/Education";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   useEffect(() => {
@@ -25,6 +27,8 @@ export default function Home() {
       <Skills />
       <Projects />
       <About />
+      <Education />
+      <Contact />
 
       {/* Footer */}
       <footer className="bg-dark-blue text-white py-8">
