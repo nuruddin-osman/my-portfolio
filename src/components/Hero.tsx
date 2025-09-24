@@ -47,7 +47,7 @@ const Hero = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.3 }}
             >
-              Hi, I'm{" "}
+              Hi, I'm
               <span className="text-orange relative">
                 John Doe
                 <motion.span

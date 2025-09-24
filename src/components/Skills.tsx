@@ -2,6 +2,7 @@
 
 import { Skill } from "@/types";
 import { motion } from "framer-motion";
+import React from "react";
 import {
   SiTypescript,
   SiJavascript,
@@ -114,7 +115,9 @@ const Skills = () => {
               >
                 <div className="flex items-center justify-between mb-4">
                   {IconComponent && (
-                    <IconComponent className="text-3xl text-dark-blue group-hover:text-orange transition-colors" />
+                    <div className="text-3xl text-dark-blue group-hover:text-orange transition-colors">
+                      {React.createElement(IconComponent)}
+                    </div>
                   )}
                   <span className="text-2xl font-bold text-orange">
                     {skill.level}%

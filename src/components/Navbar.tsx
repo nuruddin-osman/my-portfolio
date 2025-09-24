@@ -17,7 +17,15 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = ["Home", "About", "Skills", "Projects", "Contact"];
+  const navItems = [
+    "Home",
+    "About",
+    "Experience",
+    "Projects",
+    "Skills",
+    "Education",
+    "Contact",
+  ];
 
   return (
     <motion.nav

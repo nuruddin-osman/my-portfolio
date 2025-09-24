@@ -72,8 +72,8 @@ const Contact = () => {
             Get In <span className="text-orange">Touch</span>
           </h2>
           <p className="text-sm md:text-lg text-dark-blue/70 max-w-3xl mx-auto">
-            Let's discuss your project and bring your ideas to life. I'm always
-            open to new opportunities.
+            Let's discuss your project and bring your ideas to life. I&apos;m
+            always open to new opportunities.
           </p>
         </motion.div>
 
@@ -85,7 +85,7 @@ const Contact = () => {
                 Let's Talk
               </h3>
               <p className="text-dark-blue/80 text-base md:text-lg leading-relaxed mb-8">
-                I'm currently available for freelance work and full-time
+                I&apos;m currently available for freelance work and full-time
                 opportunities. Whether you have a project in mind or just want
                 to say hello, I'd love to hear from you.
               </p>
