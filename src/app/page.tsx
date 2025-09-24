@@ -14,10 +14,12 @@ import Experience from "@/components/Experience";
 
 export default function Home() {
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      offset: 100,
+    import("aos").then((AOS) => {
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+      });
     });
   }, []);
 
