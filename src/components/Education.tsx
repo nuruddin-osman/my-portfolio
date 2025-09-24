@@ -1,3 +1,4 @@
+"use client";
 import { Certification, Educations } from "@/types";
 import { motion } from "framer-motion";
 import {

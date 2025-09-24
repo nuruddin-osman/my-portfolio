@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { FaDownload, FaArrowRight } from "react-icons/fa";

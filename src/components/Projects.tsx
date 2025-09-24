@@ -1,3 +1,5 @@
+"use client";
+
 import { Project } from "@/types";
 import { motion } from "framer-motion";
 import { FaExternalLinkAlt, FaGithub, FaStar } from "react-icons/fa";

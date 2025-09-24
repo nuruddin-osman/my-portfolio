@@ -1,4 +1,4 @@
-import { Skill } from "@/types";
+"use client";
 import { motion } from "framer-motion";
 import { FaCode, FaUsers, FaCoffee, FaRocket } from "react-icons/fa";
 
