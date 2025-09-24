@@ -3,7 +3,6 @@
 import { Experienc } from "@/types";
 import { motion } from "framer-motion";
 import {
-  FaBriefcase,
   FaCalendarAlt,
   FaMapMarkerAlt,
   FaExternalLinkAlt,
@@ -94,8 +93,8 @@ const Experience = () => {
             Work <span className="text-orange">Experience</span>
           </h2>
           <p className="text-sm md:text-lg text-dark-blue/70 max-w-2xl mx-auto">
-            My professional journey and the projects I've contributed to over
-            the years
+            My professional journey and the projects I&apos;ve contributed to
+            over the years
           </p>
         </motion.div>
 

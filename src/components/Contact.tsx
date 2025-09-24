@@ -72,8 +72,8 @@ const Contact = () => {
             Get In <span className="text-orange">Touch</span>
           </h2>
           <p className="text-sm md:text-lg text-dark-blue/70 max-w-3xl mx-auto">
-            Let's discuss your project and bring your ideas to life. I&apos;m
-            always open to new opportunities.
+            Let&apos;s discuss your project and bring your ideas to life.
+            I&apos;m always open to new opportunities.
           </p>
         </motion.div>
 
@@ -82,12 +82,12 @@ const Contact = () => {
           <motion.div data-aos="fade-right" className="space-y-8">
             <div>
               <h3 className="text-lg md:text-2xl font-bold text-dark-blue mb-6">
-                Let's Talk
+                Let&apos;s Talk
               </h3>
               <p className="text-dark-blue/80 text-base md:text-lg leading-relaxed mb-8">
                 I&apos;m currently available for freelance work and full-time
                 opportunities. Whether you have a project in mind or just want
-                to say hello, I'd love to hear from you.
+                to say hello, I&apos;d love to hear from you.
               </p>
             </div>
 
@@ -157,7 +157,7 @@ const Contact = () => {
                 >
                   <FaCheckCircle />
                   <span>
-                    Message sent successfully! I'll get back to you soon.
+                    Message sent successfully! I&apos;ll get back to you soon.
                   </span>
                 </motion.div>
               )}

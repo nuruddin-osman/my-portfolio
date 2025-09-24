@@ -51,13 +51,13 @@ const Navbar = () => {
           </motion.div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-4 xl:space-x-5">
             {navItems.map((item) => (
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase()}`}
                 whileHover={{ scale: 1.1, color: "#F4991A" }}
-                className="font-medium text-dark-blue transition-colors duration-300"
+                className="text-base font-medium text-dark-blue transition-colors duration-300"
               >
                 {item}
               </motion.a>
@@ -65,7 +65,7 @@ const Navbar = () => {
           </div>
 
           {/* Social Icons */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-3">
             {[FaGithub, FaLinkedin, FaTwitter].map((Icon, index) => (
               <motion.a
                 key={index}
