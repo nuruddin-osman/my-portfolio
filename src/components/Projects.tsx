@@ -78,11 +78,11 @@ const Projects = () => {
 
                 {/* Project Content */}
                 <div className="lg:w-1/2 p-8">
-                  <h3 className="text-2xl font-bold text-dark-blue mb-3 group-hover:text-orange transition-colors">
+                  <h3 className="text-lg md:text-2xl font-bold text-dark-blue mb-3 group-hover:text-orange transition-colors">
                     {project.title}
                   </h3>
 
-                  <p className="text-dark-blue/70 mb-6 leading-relaxed">
+                  <p className="text-dark-blue/70 mb-6 leading-relaxed text-sm md:text-base">
                     {project.description}
                   </p>
 
@@ -104,7 +104,7 @@ const Projects = () => {
                       href={project.liveLink}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="flex items-center space-x-2 bg-orange text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-orange/90"
+                      className="flex items-center space-x-2 bg-orange text-white md:px-6 md:py-3 px-3 py-1.5 rounded-lg font-semibold transition-all duration-300 hover:bg-orange/90"
                     >
                       <FaExternalLinkAlt />
                       <span>Live Demo</span>
@@ -114,7 +114,7 @@ const Projects = () => {
                       href={project.githubLink}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="flex items-center space-x-2 border-2 border-dark-blue text-dark-blue px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-dark-blue hover:text-white"
+                      className="flex items-center space-x-2 border-2 md:px-6 md:py-3 px-3 py-1.5border-dark-blue text-dark-blue rounded-lg font-semibold transition-all duration-300 hover:bg-dark-blue hover:text-white"
                     >
                       <FaGithub />
                       <span>Code</span>

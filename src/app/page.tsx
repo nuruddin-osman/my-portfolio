@@ -10,6 +10,7 @@ import Projects from "@/components/Projects";
 import About from "@/components/About";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   useEffect(() => {
@@ -24,16 +25,17 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
-      <Skills />
-      <Projects />
       <About />
+      <Experience />
+      <Projects />
+      <Skills />
       <Education />
       <Contact />
 
       {/* Footer */}
       <footer className="bg-dark-blue text-white py-8">
         <div className="container mx-auto px-6 text-center">
-          <p>&copy; 2024 John Doe. All rights reserved.</p>
+          <p>&copy; 2025 Md Nuruddin Osman. All rights reserved.</p>
         </div>
       </footer>
     </>

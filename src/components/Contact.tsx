@@ -70,7 +70,7 @@ const Contact = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-dark-blue mb-4">
             Get In <span className="text-orange">Touch</span>
           </h2>
-          <p className="text-lg text-dark-blue/70 max-w-3xl mx-auto">
+          <p className="text-sm md:text-lg text-dark-blue/70 max-w-3xl mx-auto">
             Let's discuss your project and bring your ideas to life. I'm always
             open to new opportunities.
           </p>
@@ -80,10 +80,10 @@ const Contact = () => {
           {/* Contact Information */}
           <motion.div data-aos="fade-right" className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-dark-blue mb-6">
+              <h3 className="text-lg md:text-2xl font-bold text-dark-blue mb-6">
                 Let's Talk
               </h3>
-              <p className="text-dark-blue/80 text-lg leading-relaxed mb-8">
+              <p className="text-dark-blue/80 text-base md:text-lg leading-relaxed mb-8">
                 I'm currently available for freelance work and full-time
                 opportunities. Whether you have a project in mind or just want
                 to say hello, I'd love to hear from you.
@@ -99,16 +99,16 @@ const Contact = () => {
                   data-aos="fade-right"
                   data-aos-delay={index * 100}
                   whileHover={{ x: 10 }}
-                  className="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                  className="flex items-center space-x-2 p-2 md:space-x-4 md:p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                 >
-                  <div className="p-3 bg-orange/10 rounded-full group-hover:bg-orange/20 transition-colors">
-                    <method.icon className="text-2xl text-orange" />
+                  <div className="p-1.5 md:p-3 bg-orange/10 rounded-full group-hover:bg-orange/20 transition-colors">
+                    <method.icon className="text-base md:text-2xl text-orange" />
                   </div>
                   <div>
                     <div className="text-sm text-dark-blue/60">
                       {method.label}
                     </div>
-                    <div className="text-lg font-semibold text-dark-blue">
+                    <div className="text-base md:text-2xl font-semibold text-dark-blue">
                       {method.value}
                     </div>
                   </div>
@@ -118,7 +118,7 @@ const Contact = () => {
 
             {/* Social Links */}
             <div>
-              <h4 className="text-lg font-semibold text-dark-blue mb-4">
+              <h4 className="text-lg md:text-2xl font-semibold text-dark-blue mb-4">
                 Follow Me
               </h4>
               <div className="flex space-x-4">
@@ -129,7 +129,7 @@ const Contact = () => {
                     data-aos="zoom-in"
                     data-aos-delay={index * 100 + 300}
                     whileHover={{ scale: 1.2, y: -5 }}
-                    className="p-3 bg-white rounded-full shadow-lg text-dark-blue text-xl transition-colors duration-300 hover:text-orange"
+                    className="p-2 md:p-3 bg-white rounded-full shadow-lg text-dark-blue text-xl transition-colors duration-300 hover:text-orange"
                   >
                     <social.icon />
                   </motion.a>
@@ -142,9 +142,9 @@ const Contact = () => {
           <motion.div data-aos="fade-left">
             <form
               onSubmit={handleSubmit}
-              className="bg-white p-8 rounded-2xl shadow-xl"
+              className="bg-white p-5 md:p-8 rounded-2xl shadow-xl"
             >
-              <h3 className="text-2xl font-bold text-dark-blue mb-6">
+              <h3 className="text-lg md:text-2xl font-bold text-dark-blue mb-6">
                 Send Message
               </h3>
 
@@ -163,7 +163,7 @@ const Contact = () => {
 
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label className="block text-dark-blue font-semibold mb-2">
+                  <label className="block text-dark-blue font-semibold mb-2 text-sm md:text-base">
                     Name *
                   </label>
                   <input
@@ -173,12 +173,12 @@ const Contact = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
                     }
-                    className="w-full px-4 py-3 border border-light-cream rounded-lg focus:outline-none focus:border-orange transition-colors"
+                    className="w-full  px-2.5 py-1.5 md:px-4 md:py-3 text-xs md:text-sm border border-light-cream rounded-lg focus:outline-none focus:border-orange transition-colors"
                     placeholder="Your Name"
                   />
                 </div>
                 <div>
-                  <label className="block text-dark-blue font-semibold mb-2">
+                  <label className="text-sm md:text-base block text-dark-blue font-semibold mb-2">
                     Email *
                   </label>
                   <input
@@ -188,14 +188,14 @@ const Contact = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
                     }
-                    className="w-full px-4 py-3 border border-light-cream rounded-lg focus:outline-none focus:border-orange transition-colors"
+                    className="w-full  px-2.5 py-1.5 md:px-4 md:py-3 text-xs md:text-sm border border-light-cream rounded-lg focus:outline-none focus:border-orange transition-colors"
                     placeholder="your.email@domain.com"
                   />
                 </div>
               </div>
 
               <div className="mb-6">
-                <label className="block text-dark-blue font-semibold mb-2">
+                <label className="text-sm md:text-base block text-dark-blue font-semibold mb-2">
                   Subject *
                 </label>
                 <input
@@ -205,13 +205,13 @@ const Contact = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, subject: e.target.value })
                   }
-                  className="w-full px-4 py-3 border border-light-cream rounded-lg focus:outline-none focus:border-orange transition-colors"
+                  className="w-full  px-2.5 py-1.5 md:px-4 md:py-3 text-xs md:text-sm border border-light-cream rounded-lg focus:outline-none focus:border-orange transition-colors"
                   placeholder="Project Discussion"
                 />
               </div>
 
               <div className="mb-6">
-                <label className="block text-dark-blue font-semibold mb-2">
+                <label className="text-sm md:text-base block text-dark-blue font-semibold mb-2">
                   Message *
                 </label>
                 <textarea
@@ -221,7 +221,7 @@ const Contact = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
-                  className="w-full px-4 py-3 border border-light-cream rounded-lg focus:outline-none focus:border-orange transition-colors resize-none"
+                  className="w-full  px-2.5 py-1.5 md:px-4 md:py-3 text-xs md:text-sm border border-light-cream rounded-lg focus:outline-none focus:border-orange transition-colors resize-none"
                   placeholder="Tell me about your project..."
                 ></textarea>
               </div>
@@ -231,7 +231,7 @@ const Contact = () => {
                 disabled={isSubmitting}
                 whileHover={{ scale: isSubmitting ? 1 : 1.05 }}
                 whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
-                className="w-full bg-orange text-white py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-orange text-white py-2 md:py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>

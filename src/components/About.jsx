@@ -34,26 +34,26 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div data-aos="fade-right" className="space-y-6">
-            <h3 className="text-3xl font-bold text-dark-blue">
+            <h3 className="text-2xl md:text-3xl font-bold text-dark-blue">
               Crafting Digital Experiences That Matter
             </h3>
 
             <div className="space-y-4 text-dark-blue/80">
-              <p className="text-lg leading-relaxed">
+              <p className="text-base md:text-lg leading-relaxed">
                 Hello! I'm{" "}
                 <span className="text-orange font-semibold">John Doe</span>, a
                 dedicated MERN Stack Developer with over 3 years of experience
                 in creating web applications that solve real-world problems.
               </p>
 
-              <p className="text-lg leading-relaxed">
+              <p className="text-base md:text-lg leading-relaxed">
                 My journey in web development started with a curiosity about how
                 websites work, and it has evolved into a passion for building
                 scalable, efficient, and user-friendly applications using modern
                 technologies.
               </p>
 
-              <p className="text-lg leading-relaxed">
+              <p className="text-base md:text-lg leading-relaxed">
                 When I'm not coding, you can find me exploring new technologies,
                 contributing to open-source projects, or sharing knowledge with
                 the developer community.
@@ -62,19 +62,21 @@ const About = () => {
 
             {/* Personal Skills */}
             <div className="space-y-4">
-              <h4 className="text-xl font-semibold text-dark-blue">
+              <h4 className="text-lg md:text-xl font-semibold text-dark-blue">
                 What I Do
               </h4>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-2 md:gap-4">
                 {personalSkills.map((skill, index) => (
                   <motion.div
                     key={skill.name}
                     data-aos="fade-up"
                     data-aos-delay={index * 100}
-                    className="flex items-center space-x-3"
+                    className="flex items-center space-x-1.5 md:space-x-3"
                   >
-                    <div className="w-2 h-2 bg-orange rounded-full"></div>
-                    <span className="text-dark-blue/80">{skill.name}</span>
+                    <div className="w-2 h-2 hidden bg-orange rounded-full md:block"></div>
+                    <span className="text-dark-blue/80 text-sm md:text-base">
+                      {skill.name}
+                    </span>
                   </motion.div>
                 ))}
               </div>
@@ -89,17 +91,19 @@ const About = () => {
                 data-aos="zoom-in"
                 data-aos-delay={index * 200}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="bg-white p-6 rounded-xl shadow-lg text-center group cursor-pointer"
+                className="bg-white md:p-6 p-3 rounded-xl shadow-lg text-center group cursor-pointer"
               >
                 <div className="flex justify-center mb-3">
                   <div className="p-3 bg-orange/10 rounded-full group-hover:bg-orange/20 transition-colors">
                     <stat.icon className="text-2xl text-orange" />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-dark-blue mb-1">
+                <h3 className="text-lg md:text-2xl font-bold text-dark-blue mb-1">
                   {stat.number}
                 </h3>
-                <p className="text-dark-blue/70 font-medium">{stat.text}</p>
+                <p className="text-dark-blue/70 font-medium text-sm md:text-base">
+                  {stat.text}
+                </p>
               </motion.div>
             ))}
           </motion.div>

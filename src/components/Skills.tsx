@@ -85,13 +85,13 @@ const Skills = () => {
         </motion.div>
 
         {/* Category Tabs */}
-        <div className="flex justify-center space-x-4 mb-12">
+        <div className="flex justify-center space-x-2 md:space-x-4 mb-12">
           {categories.map((category) => (
             <motion.button
               key={category.id}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${category.color}`}
+              className={`px-3 py-1.5 md:px-6 md:py-3 rounded-full font-medium transition-all duration-300 ${category.color}`}
             >
               {category.name}
             </motion.button>

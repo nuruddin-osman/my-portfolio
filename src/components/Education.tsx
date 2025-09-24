@@ -1,3 +1,4 @@
+import { Certification, Educations } from "@/types";
 import { motion } from "framer-motion";
 import {
   FaGraduationCap,
@@ -7,7 +8,7 @@ import {
 } from "react-icons/fa";
 
 const Education = () => {
-  const educationData = [
+  const educationData: Educations[] = [
     {
       icon: FaGraduationCap,
       degree: "Bachelor of Science in Computer Science",
@@ -34,7 +35,7 @@ const Education = () => {
     },
   ];
 
-  const certifications = [
+  const certifications: Certification[] = [
     {
       name: "AWS Certified Developer",
       issuer: "Amazon Web Services",
@@ -72,8 +73,8 @@ const Education = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Education Timeline */}
           <motion.div data-aos="fade-right">
-            <h3 className="text-2xl font-bold text-dark-blue mb-8 flex items-center">
-              <FaGraduationCap className="mr-3 text-orange" />
+            <h3 className="font-bold text-dark-blue mb-8 flex items-center text-lg md:text-2xl">
+              <FaGraduationCap className="mr-2 md:mr-3 text-orange text-lg md:text-2xl" />
               Academic Background
             </h3>
 
@@ -81,92 +82,104 @@ const Education = () => {
               {/* Timeline line */}
               <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-orange/20"></div>
 
-              {educationData.map((edu, index) => (
-                <motion.div
-                  key={index}
-                  data-aos="fade-up"
-                  data-aos-delay={index * 200}
-                  className="relative pl-16"
-                >
-                  {/* Timeline dot */}
-                  <div className="absolute left-0 w-12 h-12 rounded-full bg-white border-4 border-orange flex items-center justify-center">
-                    <edu.icon className="text-orange text-lg" />
-                  </div>
-
+              {educationData.map((edu, index) => {
+                const IconComponent = edu.icon as React.ComponentType<{
+                  className?: string;
+                }>;
+                return (
                   <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    className="bg-light-cream/50 p-6 rounded-xl hover:bg-light-cream transition-colors duration-300"
+                    key={index}
+                    data-aos="fade-up"
+                    data-aos-delay={index * 200}
+                    className="relative pl-8 md:pl-16"
                   >
-                    <div className="flex justify-between items-start mb-3">
-                      <h4 className="text-xl font-semibold text-dark-blue">
-                        {edu.degree}
-                      </h4>
-                      <span className="px-3 py-1 bg-orange text-white text-sm rounded-full">
-                        {edu.duration}
-                      </span>
+                    {/* Timeline dot */}
+                    <div className="absolute left-0 w-6 h-6 md:w-12 md:h-12 rounded-full bg-white border-2 md:border-2 border-orange flex items-center justify-center">
+                      <IconComponent className="text-orange text-base md:text-lg" />
                     </div>
 
-                    <p className="text-dark-blue/80 font-medium mb-2">
-                      {edu.institution}
-                    </p>
-                    <p className="text-orange font-semibold mb-3">
-                      {edu.grade}
-                    </p>
+                    <motion.div
+                      whileHover={{ scale: 1.02 }}
+                      className="bg-light-cream/50 p-3 md:p-6 rounded-xl hover:bg-light-cream transition-colors duration-300"
+                    >
+                      <div className="flex flex-col md:flex-row justify-between gap-2">
+                        <h4 className="text-base md:text-xl font-semibold text-dark-blue leading-[18px]">
+                          {edu.degree}
+                        </h4>
+                        <span className="px-2 py-1 bg-orange text-white text-[10px] rounded-lg w-20 h-fit">
+                          {edu.duration}
+                        </span>
+                      </div>
 
-                    <div className="space-y-1">
-                      {edu.achievements.map((achievement, idx) => (
-                        <div
-                          key={idx}
-                          className="flex items-center space-x-2 text-dark-blue/70"
-                        >
-                          <div className="w-1.5 h-1.5 bg-orange rounded-full"></div>
-                          <span className="text-sm">{achievement}</span>
-                        </div>
-                      ))}
-                    </div>
+                      <p className="text-base md:text-lg text-dark-blue/80 font-medium my-2">
+                        {edu.institution}
+                      </p>
+                      <p className="text-orange font-semibold mb-3">
+                        {edu.grade}
+                      </p>
+
+                      <div className="space-y-1">
+                        {edu.achievements.map((achievement, idx) => (
+                          <div
+                            key={idx}
+                            className="flex items-center space-x-2 text-dark-blue/70"
+                          >
+                            <div className="w-1.5 h-1.5 bg-orange rounded-full"></div>
+                            <span className="text-sm">{achievement}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </motion.div>
                   </motion.div>
-                </motion.div>
-              ))}
+                );
+              })}
             </div>
           </motion.div>
 
           {/* Certifications */}
           <motion.div data-aos="fade-left">
-            <h3 className="text-2xl font-bold text-dark-blue mb-8 flex items-center">
+            <h3 className="font-bold text-dark-blue mb-8 flex items-center text-lg md:text-2xl">
               <FaAward className="mr-3 text-orange" />
               Professional Certifications
             </h3>
 
             <div className="space-y-6">
-              {certifications.map((cert, index) => (
-                <motion.div
-                  key={index}
-                  data-aos="zoom-in"
-                  data-aos-delay={index * 200}
-                  whileHover={{ scale: 1.02, y: -5 }}
-                  className="bg-gradient-to-r from-light-cream to-cream p-6 rounded-xl border-l-4 border-orange shadow-lg"
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className="p-3 bg-orange/10 rounded-full">
-                      <cert.icon className="text-2xl text-orange" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-lg font-semibold text-dark-blue mb-1">
-                        {cert.name}
-                      </h4>
-                      <p className="text-dark-blue/70 mb-2">{cert.issuer}</p>
-                      <div className="flex justify-between items-center">
-                        <span className="px-3 py-1 bg-dark-blue text-white text-sm rounded-full">
-                          {cert.year}
-                        </span>
-                        <span className="text-orange font-semibold">
-                          Verified
-                        </span>
+              {certifications.map((cert, index) => {
+                const CartIconComponent = cert.icon as React.ComponentType<{
+                  className?: string;
+                }>;
+                return (
+                  <motion.div
+                    key={index}
+                    data-aos="zoom-in"
+                    data-aos-delay={index * 200}
+                    whileHover={{ scale: 1.02, y: -5 }}
+                    className="bg-gradient-to-r from-light-cream to-cream p-3 md:p-6 rounded-xl border-l-4 border-orange shadow-lg"
+                  >
+                    <div className="flex items-start space-x-4">
+                      <div className="p-3 bg-orange/10 rounded-full">
+                        <CartIconComponent className="text:xl md:text-2xl text-orange" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-base md:text-lg font-semibold text-dark-blue mb-1">
+                          {cert.name}
+                        </h4>
+                        <p className="text-dark-blue/70 mb-2 text-sm md:text-base">
+                          {cert.issuer}
+                        </p>
+                        <div className="flex justify-between items-center">
+                          <span className="px-2 py-1 bg-dark-blue text-white text-sm rounded-full">
+                            {cert.year}
+                          </span>
+                          <span className="text-orange font-semibold">
+                            Verified
+                          </span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                );
+              })}
             </div>
 
             {/* Skills Summary */}
@@ -175,7 +188,7 @@ const Education = () => {
               data-aos-delay="600"
               className="mt-8 bg-dark-blue rounded-xl p-6 text-white"
             >
-              <h4 className="text-xl font-semibold mb-4 text-orange">
+              <h4 className="text-lg md:text-xl font-semibold mb-4 text-orange">
                 Continuous Learning
               </h4>
               <div className="space-y-3">

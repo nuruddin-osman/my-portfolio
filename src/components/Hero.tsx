@@ -17,7 +17,7 @@ const Hero = () => {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-dark-blue/5 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto relative px-4 md:px-6 z-10 pt-10 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <motion.div
@@ -72,7 +72,7 @@ const Hero = () => {
               />
             </div>
 
-            <p className="text-lg text-dark-blue/70 leading-relaxed">
+            <p className="text-base md:text-lg text-dark-blue/70 leading-relaxed">
               I craft scalable, performant web applications using cutting-edge
               technologies. Passionate about clean code, user experience, and
               innovative solutions.
@@ -103,7 +103,7 @@ const Hero = () => {
                   boxShadow: "0 10px 30px rgba(244, 153, 26, 0.3)",
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-orange text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 transition-all duration-300"
+                className="bg-orange text-white px-4 md:px-8 py-3 md:py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 transition-all duration-300 text-base"
               >
                 <span>View My Work</span>
                 <FaArrowRight />
@@ -114,7 +114,7 @@ const Hero = () => {
                 download
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-dark-blue text-dark-blue px-8 py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 transition-all duration-300 hover:bg-dark-blue hover:text-white"
+                className="border-2 border-dark-blue text-dark-blue px-4 md:px-8 py-3 md:py-4 text-base rounded-lg font-semibold flex items-center justify-center space-x-2 transition-all duration-300 hover:bg-dark-blue hover:text-white"
               >
                 <FaDownload />
                 <span>Download CV</span>
