@@ -49,7 +49,9 @@ const Skills = () => {
     { name: "Figma", level: 82, category: "tools", icon: "SiFigma" },
   ];
 
-  const iconMap: { [key: string]: React.ComponentType<any> } = {
+  const iconMap: {
+    [key: string]: React.ComponentType<{ className?: string }>;
+  } = {
     SiTypescript,
     SiJavascript,
     SiReact,
