@@ -7,14 +7,7 @@ import {
   FaMapMarkerAlt,
   FaExternalLinkAlt,
 } from "react-icons/fa";
-import {
-  SiReact,
-  SiNodedotjs,
-  SiMongodb,
-  SiTypescript,
-  SiAmazon,
-  SiDocker,
-} from "react-icons/si";
+import { SiReact } from "react-icons/si";
 
 const Experience = () => {
   const experiences: Experienc[] = [
@@ -31,7 +24,7 @@ const Experience = () => {
         "GioNaturals (ecommerce) project customization (WordPress)",
         "I have learned PHP, Laravel, MySQL, jQuery, Ajax, WordPress",
       ],
-      technologies: ["React", "Next.js", "PHP", "Laravel", "Ajax"],
+      technologies: ["React", "Next.js", "PHP", "Laravel", "Ajax", "MySQL"],
       achievements: [
         "I have worked with multiple senior developers.",
         "I have justified how POS applications work.",
@@ -42,21 +35,6 @@ const Experience = () => {
     },
   ];
 
-  const techIcons: { [key: string]: React.ComponentType } = {
-    React: SiReact,
-    "Node.js": SiNodedotjs,
-    MongoDB: SiMongodb,
-    TypeScript: SiTypescript,
-    AWS: SiAmazon,
-    Docker: SiDocker,
-    "Express.js": SiNodedotjs,
-    JavaScript: SiTypescript,
-    Firebase: SiAmazon,
-    CSS3: SiReact,
-    Redux: SiReact,
-    "Material-UI": SiReact,
-  };
-
   return (
     <section id="experience" className="section py-10 md:py-20 bg-white">
       <div className="container mx-auto px-6">
@@ -66,7 +44,7 @@ const Experience = () => {
             Work <span className="text-orange">Experience</span>
           </h2>
           <p className="text-sm md:text-lg text-dark-blue/70 max-w-2xl mx-auto">
-            My professional journey and the projects I've contributed to
+            My professional journey and the projects I&apos;ve contributed to
           </p>
         </motion.div>
 

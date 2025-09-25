@@ -13,40 +13,97 @@ import {
   SiMongodb,
   SiTailwindcss,
   SiGit,
-  SiDocker,
-  SiAmazon,
+  SiMysql,
+  SiLaravel,
   SiFigma,
 } from "react-icons/si";
 
 const Skills = () => {
   const skills: Skill[] = [
     {
-      name: "TypeScript",
-      level: 95,
-      category: "frontend",
-      icon: "SiTypescript",
-    },
-    {
       name: "JavaScript",
-      level: 98,
+      level: "Intermediate+",
+      progress_bar: 70,
       category: "frontend",
       icon: "SiJavascript",
     },
-    { name: "React.js", level: 95, category: "frontend", icon: "SiReact" },
-    { name: "Next.js", level: 90, category: "frontend", icon: "SiNextdotjs" },
-    { name: "Node.js", level: 92, category: "backend", icon: "SiNodedotjs" },
-    { name: "Express.js", level: 88, category: "backend", icon: "SiExpress" },
-    { name: "MongoDB", level: 85, category: "backend", icon: "SiMongodb" },
+    {
+      name: "React.js",
+      level: "Advanced",
+      progress_bar: 90,
+      category: "frontend",
+      icon: "SiReact",
+    },
+    {
+      name: "Next.js",
+      level: "Intermediate",
+      progress_bar: 60,
+      category: "frontend",
+      icon: "SiNextdotjs",
+    },
+    {
+      name: "Node.js",
+      level: "Intermediate",
+      progress_bar: 50,
+      category: "backend",
+      icon: "SiNodedotjs",
+    },
+    {
+      name: "Express.js",
+      level: "Intermediate",
+      progress_bar: 50,
+      category: "backend",
+      icon: "SiExpress",
+    },
+    {
+      name: "MongoDB",
+      level: "Intermediate",
+      progress_bar: 40,
+      category: "backend",
+      icon: "SiMongodb",
+    },
     {
       name: "Tailwind CSS",
-      level: 94,
+      level: "Advanced",
+      progress_bar: 90,
       category: "frontend",
       icon: "SiTailwindcss",
     },
-    { name: "Git", level: 90, category: "tools", icon: "SiGit" },
-    { name: "Docker", level: 78, category: "tools", icon: "SiDocker" },
-    { name: "AWS", level: 75, category: "tools", icon: "SiAmazon" },
-    { name: "Figma", level: 82, category: "tools", icon: "SiFigma" },
+    {
+      name: "Git",
+      level: "Intermediate",
+      progress_bar: 65,
+      category: "tools",
+      icon: "SiGit",
+    },
+    {
+      name: "Laravel",
+      level: "Introductory",
+      progress_bar: 35,
+      category: "tools",
+      icon: "SiLaravel",
+    },
+    {
+      name: "MySQL",
+      level: "Introductory",
+      progress_bar: 38,
+      category: "tools",
+      icon: "SiMysql",
+    },
+    {
+      name: "Figma",
+      level: "Intermediate",
+      progress_bar: 70,
+      category: "tools",
+      icon: "SiFigma",
+    },
+    {
+      name: "TypeScript",
+      level: "Intermediate",
+      progress_bar: 45,
+      category: "frontend",
+      icon: "SiTypescript",
+    },
   ];
 
   const iconMap: {
@@ -61,8 +118,8 @@ const Skills = () => {
     SiMongodb,
     SiTailwindcss,
     SiGit,
-    SiDocker,
-    SiAmazon,
+    SiLaravel,
+    SiMysql,
     SiFigma,
   };
 
@@ -122,7 +179,7 @@ const Skills = () => {
                     </div>
                   )}
                   <span className="text-2xl font-bold text-orange">
-                    {skill.level}%
+                    {skill.level}
                   </span>
                 </div>
 
@@ -133,7 +190,7 @@ const Skills = () => {
                 <div className="w-full bg-light-cream rounded-full h-2">
                   <motion.div
                     initial={{ width: 0 }}
-                    whileInView={{ width: `${skill.level}%` }}
+                    whileInView={{ width: `${skill.progress_bar}%` }}
                     transition={{ duration: 1.5, delay: index * 0.1 }}
                     className="h-full bg-gradient-to-r from-orange to-dark-blue rounded-full"
                   />
