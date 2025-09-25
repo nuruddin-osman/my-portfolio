@@ -3,40 +3,75 @@
 import { Project } from "@/types";
 import { motion } from "framer-motion";
 import { FaExternalLinkAlt, FaGithub, FaStar } from "react-icons/fa";
+import PosApp from "@/assets/projects/22.png";
+import ElectronicEcommerce from "@/assets/projects/44.png";
+import ChattingApp from "@/assets/projects/55.png";
+import Naturemade from "@/assets/projects/66.png";
+import Image from "next/image";
 
 const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Modern E-Commerce Platform",
+      title: "POS Application for Hospital",
       description:
-        "Full-stack e-commerce solution with advanced features like real-time inventory, payment processing, and admin dashboard.",
-      technologies: ["Next.js", "TypeScript", "Node.js", "MongoDB", "Stripe"],
-      image: "/projects/ecommerce.jpg",
-      liveLink: "#",
-      githubLink: "#",
+        "Full-stack POS Application solution with advanced features like real-time Patient-management, Billing & invoice, Inventory, Apointment and Admin Profile.",
+      technologies: [
+        "React.js",
+        "React-router-dom",
+        "JavaScript",
+        "Node.js",
+        "MongoDB",
+        "Express.js",
+        "JWT",
+        "Chart.js",
+      ],
+      image: PosApp.src,
+      liveLink: "https://pos-application-tan.vercel.app/",
+      githubLink: "https://github.com/nuruddin-osman/pos-application",
       featured: true,
     },
     {
       id: 2,
-      title: "Task Management App",
+      title: "E-commerce for Electronic device",
       description:
-        "Collaborative task management application with real-time updates, drag & drop, and team collaboration features.",
-      technologies: ["React", "Socket.io", "Express.js", "MongoDB", "JWT"],
-      image: "/projects/taskapp.jpg",
-      liveLink: "#",
-      githubLink: "#",
+        "Full-stack E-commerce application solution with advanced features like real-time product change, add to cart, checkout, rating, filter, and Admin Dashboard.",
+      technologies: [
+        "React.js",
+        "Redux",
+        "React-router-dom",
+        "JavaScript",
+        "Node.js",
+        "MongoDB",
+        "Express.js",
+        "JWT",
+      ],
+      image: ElectronicEcommerce.src,
+      liveLink: "https://laptop-mobile-ecommerc-t1af.vercel.app/",
+      githubLink: "https://github.com/nuruddin-osman/laptop-mobile-ecommerc",
       featured: true,
     },
     {
       id: 3,
-      title: "Social Media Analytics",
+      title: "Real-time Chatting-Application",
       description:
-        "Comprehensive analytics dashboard for social media management with data visualization and reporting.",
-      technologies: ["TypeScript", "Chart.js", "Node.js", "MySQL", "D3.js"],
-      image: "/projects/analytics.jpg",
-      liveLink: "#",
-      githubLink: "#",
+        "Send friend requests, accept requests, cancel requests, and send real-time messages with this application",
+      technologies: ["JavaScript", "React.js", "Redux", "Firebase"],
+      image: ChattingApp,
+      liveLink: "https://neon-kheer-a6e3c7.netlify.app/",
+      githubLink:
+        "https://github.com/nuruddin-osman/chatting-application-final",
+      featured: false,
+    },
+    {
+      id: 4,
+      title: "E-commerce for Natural-products",
+      description:
+        "User login, registration, product add to cart, Dynamic Routing, price calculation, product checkout. Dynamic content load, API Integration",
+      technologies: ["JavaScript", "Next.js", "Redux"],
+      image: Naturemade,
+      liveLink: "https://naturmade.netlify.app/",
+      githubLink: "https://github.com/nuruddin-osman/naturmade-ecommerce",
       featured: false,
     },
   ];
@@ -68,7 +103,14 @@ const Projects = () => {
                 {/* Project Image */}
                 <div className="lg:w-1/2 relative overflow-hidden">
                   <div className="h-64 lg:h-full bg-gradient-to-br from-dark-blue to-orange flex items-center justify-center">
-                    <div className="text-6xl text-white">📱</div>
+                    <div className="h-full min-w-full overflow-hidden">
+                      <Image
+                        src={project.image}
+                        alt="Pos application image"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
                   </div>
                   {project.featured && (
                     <div className="absolute top-4 left-4 bg-orange text-white px-3 py-1 rounded-full flex items-center space-x-1">
@@ -104,6 +146,7 @@ const Projects = () => {
                   <div className="flex space-x-4">
                     <motion.a
                       href={project.liveLink}
+                      target="_blank"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="flex items-center space-x-2 bg-orange text-white md:px-6 md:py-3 px-3 py-1.5 rounded-lg font-semibold transition-all duration-300 hover:bg-orange/90"
@@ -114,6 +157,7 @@ const Projects = () => {
 
                     <motion.a
                       href={project.githubLink}
+                      target="_blank"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="flex items-center space-x-2 border-2 md:px-6 md:py-3 px-3 py-1.5border-dark-blue text-dark-blue rounded-lg font-semibold transition-all duration-300 hover:bg-dark-blue hover:text-white"

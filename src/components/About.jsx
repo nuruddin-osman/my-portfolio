@@ -1,19 +1,19 @@
 "use client";
 import { motion } from "framer-motion";
-import { FaCode, FaUsers, FaCoffee, FaRocket } from "react-icons/fa";
+import { FaCode, FaUsers, FaRocket } from "react-icons/fa";
+import { AiFillBank } from "react-icons/ai";
 
 const About = () => {
   const stats = [
-    { icon: FaCode, number: "50+", text: "Projects Completed" },
-    { icon: FaUsers, number: "30+", text: "Happy Clients" },
-    { icon: FaCoffee, number: "500+", text: "Cups of Coffee" },
+    { icon: FaCode, number: "10+", text: "Projects Completed" },
+    { icon: FaUsers, number: "0+", text: "Happy Clients" },
+    { icon: AiFillBank, number: "2+", text: "Related Companies" },
     { icon: FaRocket, number: "3+", text: "Years Experience" },
   ];
 
   const personalSkills = [
     { name: "Frontend Development", level: 95 },
     { name: "Backend Development", level: 88 },
-    { name: "UI/UX Design", level: 82 },
     { name: "Problem Solving", level: 90 },
   ];
 
@@ -35,15 +35,18 @@ const About = () => {
           {/* Left Content */}
           <motion.div data-aos="fade-right" className="space-y-6">
             <h3 className="text-2xl md:text-3xl font-bold text-dark-blue">
-              Crafting Digital Experiences That Matter
+              My current attitude towards coding
             </h3>
 
             <div className="space-y-4 text-dark-blue/80">
               <p className="text-base md:text-lg leading-relaxed">
                 Hello! I'm{" "}
-                <span className="text-orange font-semibold">John Doe</span>, a
-                dedicated MERN Stack Developer with over 3 years of experience
-                in creating web applications that solve real-world problems.
+                <span className="text-orange font-semibold">
+                  Md Nuruddin Osman
+                </span>
+                , a dedicated MERN Stack Developer with over 3 years of
+                experience in creating web applications that solve real-world
+                problems.
               </p>
 
               <p className="text-base md:text-lg leading-relaxed">
@@ -125,7 +128,7 @@ const About = () => {
               <p className="text-light-cream">Support Available</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-orange mb-2">50+</div>
+              <div className="text-3xl font-bold text-orange mb-2">10+</div>
               <p className="text-light-cream">Technologies Mastered</p>
             </div>
           </div>

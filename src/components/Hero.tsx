@@ -3,10 +3,28 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { FaDownload, FaArrowRight } from "react-icons/fa";
-import { SiTypescript, SiReact, SiNodedotjs, SiMongodb } from "react-icons/si";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNodedotjs,
+  SiMongodb,
+  SiExpress,
+  SiLaravel,
+} from "react-icons/si";
+import Image from "next/image";
+import Banner from "@/assets/images/banner.png";
 
 const Hero = () => {
-  const techIcons = [SiTypescript, SiReact, SiNodedotjs, SiMongodb];
+  const techIcons = [
+    SiJavascript,
+    SiTypescript,
+    SiReact,
+    SiNodedotjs,
+    SiMongodb,
+    SiExpress,
+    SiLaravel,
+  ];
 
   return (
     <section
@@ -20,7 +38,7 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto relative px-4 md:px-6 z-10 pt-10 pb-16">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 xl:gap-12 items-center">
           {/* Content */}
           <motion.div
             data-aos="fade-right"
@@ -42,14 +60,14 @@ const Hero = () => {
             </motion.div>
 
             <motion.h1
-              className="text-4xl md:text-6xl font-bold text-dark-blue leading-tight"
+              className="text-[22px] md:text-4xl font-bold text-dark-blue leading-tight"
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.3 }}
             >
-              Hi, I&apos;m
+              Hi, I&apos;m{" "}
               <span className="text-orange relative">
-                John Doe
+                Md Nuriddin Osman
                 <motion.span
                   className="absolute -bottom-2 left-0 w-full h-1 bg-orange"
                   initial={{ scaleX: 0 }}
@@ -64,7 +82,9 @@ const Hero = () => {
                 sequence={[
                   "MERN Stack Developer",
                   2000,
-                  "TypeScript Expert",
+                  "JavaScript Expert",
+                  2000,
+                  "TypeScript Learner",
                   2000,
                   "Full-Stack Specialist",
                   2000,
@@ -75,20 +95,22 @@ const Hero = () => {
             </div>
 
             <p className="text-base md:text-lg text-dark-blue/70 leading-relaxed">
-              I craft scalable, performant web applications using cutting-edge
-              technologies. Passionate about clean code, user experience, and
-              innovative solutions.
+              To establish myself as a professional software developer in
+              different local and international markets. Strong problem-solving
+              mindset and sorboda prostut for delivering clean, efficient, and
+              maintainable code. Always eager to learn new tools and contribute
+              to innovative projects.
             </p>
 
             {/* Tech Stack Icons */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2 md:space-x-4">
               <span className="text-dark-blue/60 font-medium">Tech Stack:</span>
               <div className="flex space-x-3">
                 {techIcons.map((Icon, index) => (
                   <motion.div
                     key={index}
                     whileHover={{ scale: 1.2, y: -5 }}
-                    className="text-2xl text-dark-blue/70 hover:text-orange transition-colors"
+                    className="text-lg md:text-2xl text-dark-blue/70 hover:text-orange transition-colors"
                   >
                     <Icon />
                   </motion.div>
@@ -134,8 +156,13 @@ const Hero = () => {
           >
             <div className="relative w-80 h-80 mx-auto">
               {/* Main Avatar */}
-              <motion.div className="w-full h-full bg-gradient-to-br from-orange to-dark-blue rounded-2xl flex items-center justify-center shadow-2xl animate-float">
-                <div className="text-6xl text-white">👨‍💻</div>
+              <motion.div className="w-full h-full bg-gradient-to-br from-orange to-dark-blue rounded-2xl flex items-center justify-center shadow-2xl animate-float overflow-hidden">
+                <Image
+                  src={Banner}
+                  alt="Banner image"
+                  fill
+                  className="object-contain"
+                />
               </motion.div>
 
               {/* Floating Elements */}
@@ -167,7 +194,7 @@ const Hero = () => {
                 }}
                 className="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg"
               >
-                <SiTypescript className="text-3xl text-dark-blue" />
+                <SiJavascript className="text-3xl text-dark-blue" />
               </motion.div>
             </div>
           </motion.div>

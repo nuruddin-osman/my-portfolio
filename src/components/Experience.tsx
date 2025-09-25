@@ -20,51 +20,24 @@ const Experience = () => {
   const experiences: Experienc[] = [
     {
       id: 1,
-      title: "Senior MERN Stack Developer",
-      company: "TechInnovate Solutions",
+      title: "Frontend Developer (Intern)",
+      company: "American Wellness Center",
       type: "Full-time",
-      duration: "2022 - Present",
-      location: "Remote",
-      description:
-        "Leading a team of developers to build scalable web applications for enterprise clients. Specializing in microservices architecture and cloud deployment.",
-      technologies: [
-        "React",
-        "Node.js",
-        "MongoDB",
-        "TypeScript",
-        "AWS",
-        "Docker",
+      duration: "Dec-2024 - May-2025",
+      location: "On-site",
+      description: [
+        "Naturemade (ecommerce) dynamic front-end UI design with responsive (Next.js)",
+        "Working with the Careneterp (POS) software.",
+        "GioNaturals (ecommerce) project customization (WordPress)",
+        "I have learned PHP, Laravel, MySQL, jQuery, Ajax, WordPress",
       ],
+      technologies: ["React", "Next.js", "PHP", "Laravel", "Ajax"],
       achievements: [
-        "Reduced application load time by 40% through optimization",
-        "Led a team of 5 developers on 3 major projects",
-        "Implemented CI/CD pipeline reducing deployment time by 60%",
+        "I have worked with multiple senior developers.",
+        "I have justified how POS applications work.",
+        "In addition to programming, I learned how to present myself at a production level.",
       ],
       icon: SiReact,
-      link: "#",
-    },
-    {
-      id: 2,
-      title: "Full Stack Developer",
-      company: "DigitalCraft Inc.",
-      type: "Full-time",
-      duration: "2021 - 2022",
-      location: "San Francisco, CA",
-      description:
-        "Developed and maintained multiple client projects using MERN stack. Focused on creating responsive and performant web applications.",
-      technologies: [
-        "React",
-        "Express.js",
-        "MongoDB",
-        "JavaScript",
-        "Firebase",
-      ],
-      achievements: [
-        "Delivered 15+ projects with 100% client satisfaction",
-        "Improved code quality by implementing testing practices",
-        "Mentored 2 junior developers",
-      ],
-      icon: SiNodedotjs,
       link: "#",
     },
   ];
@@ -93,8 +66,7 @@ const Experience = () => {
             Work <span className="text-orange">Experience</span>
           </h2>
           <p className="text-sm md:text-lg text-dark-blue/70 max-w-2xl mx-auto">
-            My professional journey and the projects I&apos;ve contributed to
-            over the years
+            My professional journey and the projects I've contributed to
           </p>
         </motion.div>
 
@@ -156,7 +128,7 @@ const Experience = () => {
                     </div>
 
                     {/* Meta Info */}
-                    <div className="grid grid-cols-2 gap-4 mb-4">
+                    <div className="flex justify-between items-center mb-4">
                       <div className="flex items-center md:space-x-2 text-dark-blue/70">
                         <FaCalendarAlt className="hidden md:block text-orange" />
                         <span className="text-[10px] md:text-sm">
@@ -171,10 +143,13 @@ const Experience = () => {
                       </div>
                     </div>
 
-                    {/* Description */}
-                    <p className="text-sm md:text-base text-dark-blue/80 mb-4 leading-relaxed">
-                      {exp.description}
-                    </p>
+                    <ul className="list-disc list-inside space-y-2 text-dark-blue mb-4">
+                      {exp.description.map((desc, idx) => (
+                        <li key={idx} className="text-sm leading-relaxed">
+                          {desc}
+                        </li>
+                      ))}
+                    </ul>
 
                     {/* Technologies */}
                     <div className="mb-4">
@@ -183,15 +158,11 @@ const Experience = () => {
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {exp.technologies.map((tech) => {
-                          const TechIcon = techIcons[
-                            tech
-                          ] as React.ComponentType<{ className?: string }>;
                           return (
                             <span
                               key={tech}
                               className="flex items-center space-x-1 px-3 py-1 bg-light-cream text-dark-blue rounded-full text-sm"
                             >
-                              {TechIcon && <TechIcon className="text-orange" />}
                               <span className="text-[10px] md:text-sm">
                                 {tech}
                               </span>
@@ -235,9 +206,9 @@ const Experience = () => {
         >
           {[
             { number: "3+", label: "Years Experience" },
-            { number: "50+", label: "Projects Completed" },
-            { number: "30+", label: "Happy Clients" },
-            { number: "15+", label: "Technologies" },
+            { number: "10+", label: "Projects Completed" },
+            { number: "1+", label: "Happy Clients" },
+            { number: "10+", label: "Technologies" },
           ].map((stat, index) => (
             <motion.div
               key={index}

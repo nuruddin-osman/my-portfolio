@@ -1,9 +1,13 @@
+// import { IconType } from "react-icons";
+
+import { StaticImageData } from "next/image";
+
 export interface Project {
   id: number;
   title: string;
   description: string;
   technologies: string[];
-  image: string;
+  image: string | StaticImageData;
   liveLink: string;
   githubLink: string;
   featured: boolean;
@@ -45,9 +49,13 @@ export interface Experienc {
   type: string;
   duration: string;
   location: string;
-  description: string;
+  description: string[];
   technologies: string[];
   achievements: string[];
   icon: React.ComponentType;
   link: string;
 }
+
+// const interface SocialLink{
+//   icon: IconType
+// }

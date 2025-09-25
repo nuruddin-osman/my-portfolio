@@ -4,6 +4,9 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import Image from "next/image";
+import Logo from "@/assets/images/logo_nav_blue.png";
+import Link from "next/link";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -27,27 +30,37 @@ const Navbar = () => {
     "Contact",
   ];
 
+  const socialLinks = [
+    { icon: FaGithub, link: "https://github.com/nuruddin-osman" },
+    { icon: FaLinkedin, link: "https://www.linkedin.com/in/nuruddinos/" },
+    { icon: FaTwitter, link: "https://x.com/NuruddinDev" },
+  ];
+
   return (
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "py-3 bg-cream/90 backdrop-blur-md shadow-lg"
-          : "py-6 bg-cream"
+          ? "py-0 bg-cream/90 backdrop-blur-md shadow-lg"
+          : "py-1.5 bg-cream shadow-md"
       }`}
     >
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold text-dark-blue flex items-center space-x-2"
-          >
-            <div className="w-3 h-3 bg-orange rounded-full"></div>
-            <span>
-              Dev<span className="text-orange">.</span>Portfolio
-            </span>
+          <motion.div whileHover={{ scale: 1.05 }} className="">
+            <Link
+              href="#hero"
+              className="relative block w-[120px] h-[50px] md:w-[150px] md:h-[70px] overflow-hidden"
+            >
+              <Image
+                src={Logo}
+                alt="Logo Icon"
+                fill
+                className="object-contain"
+              />
+            </Link>
           </motion.div>
 
           {/* Desktop Menu */}
@@ -66,10 +79,11 @@ const Navbar = () => {
 
           {/* Social Icons */}
           <div className="hidden md:flex items-center space-x-3">
-            {[FaGithub, FaLinkedin, FaTwitter].map((Icon, index) => (
+            {socialLinks.map(({ icon: Icon, link }, index) => (
               <motion.a
                 key={index}
-                href="#"
+                href={link}
+                target="_blank"
                 whileHover={{ scale: 1.2, color: "#F4991A" }}
                 className="text-dark-blue text-xl"
               >
