@@ -1,59 +1,40 @@
 "use client";
 import { Certification, Educations } from "@/types";
 import { motion } from "framer-motion";
-import {
-  FaGraduationCap,
-  FaCertificate,
-  FaBook,
-  FaAward,
-} from "react-icons/fa";
+import { FaGraduationCap, FaAward } from "react-icons/fa";
 
 const Education = () => {
   const educationData: Educations[] = [
     {
       icon: FaGraduationCap,
-      degree: "Bachelor of Science in Computer Science",
-      institution: "University of Technology",
-      duration: "2018 - 2022",
-      grade: "3.8/4.0 GPA",
-      achievements: ["Dean's List", "Best Final Year Project"],
+      degree: "Diploma in Civil Engineering",
+      institution: "Chandpur Polytechnic Institute",
+      duration: "2016 - 2020",
+      grade: "3.66/4.0 CGPA",
+      achievements: ["Five-storied building Skill competition (2nd place)"],
     },
     {
-      icon: FaCertificate,
-      degree: "Full Stack Web Development",
-      institution: "Coding Bootcamp",
-      duration: "2022 - 2023",
-      grade: "Certification",
-      achievements: ["Top 5% of Class", "3 Real-world Projects"],
-    },
-    {
-      icon: FaBook,
-      degree: "Advanced JavaScript & React",
-      institution: "Online Specialization",
-      duration: "2023",
-      grade: "Specialization",
-      achievements: ["Advanced Concepts", "Performance Optimization"],
+      icon: FaGraduationCap,
+      degree: "Dakhil",
+      institution: "Gausia Sobhania Alim Madrasha",
+      duration: "2016",
+      grade: "5.00/5.00 GPA",
+      achievements: [""],
     },
   ];
 
   const certifications: Certification[] = [
     {
-      name: "AWS Certified Developer",
-      issuer: "Amazon Web Services",
-      year: "2023",
-      icon: FaAward,
+      name: "MERN Stack Development",
+      issuer: "One Year Academy",
+      year: "2024",
+      icon: FaGraduationCap,
     },
     {
-      name: "MongoDB Certified Developer",
-      issuer: "MongoDB University",
+      name: "Creative IT Institute",
+      issuer: "Frontend development with react",
       year: "2023",
-      icon: FaAward,
-    },
-    {
-      name: "React Professional Certificate",
-      issuer: "Meta",
-      year: "2022",
-      icon: FaAward,
+      icon: FaGraduationCap,
     },
   ];
 
@@ -104,10 +85,10 @@ const Education = () => {
                       className="bg-light-cream/50 p-3 md:p-6 rounded-xl hover:bg-light-cream transition-colors duration-300"
                     >
                       <div className="flex flex-col md:flex-row justify-between gap-2">
-                        <h4 className="text-base md:text-xl font-semibold text-dark-blue leading-[18px]">
+                        <h4 className="text-base md:text-xl font-semibold text-dark-blue leading-[18px] md:w-3/4">
                           {edu.degree}
                         </h4>
-                        <span className="px-2 py-1 bg-orange text-white text-[10px] rounded-lg w-20 h-fit">
+                        <span className="px-2 py-1 bg-orange text-white text-[10px] rounded-lg md:w-1/4 h-fit">
                           {edu.duration}
                         </span>
                       </div>
@@ -141,7 +122,7 @@ const Education = () => {
           <motion.div data-aos="fade-left">
             <h3 className="font-bold text-dark-blue mb-8 flex items-center text-lg md:text-2xl">
               <FaAward className="mr-3 text-orange" />
-              Professional Certifications
+              Certifications
             </h3>
 
             <div className="space-y-6">
@@ -193,17 +174,14 @@ const Education = () => {
                 Continuous Learning
               </h4>
               <div className="space-y-3">
-                {[
-                  "Weekly code challenges",
-                  "Open source contributions",
-                  "Tech community participation",
-                  "Regular skill updates",
-                ].map((item, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-orange rounded-full"></div>
-                    <span className="text-light-cream">{item}</span>
-                  </div>
-                ))}
+                {["Tech community participation", "Regular skill updates"].map(
+                  (item, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-orange rounded-full"></div>
+                      <span className="text-light-cream">{item}</span>
+                    </div>
+                  )
+                )}
               </div>
             </motion.div>
           </motion.div>

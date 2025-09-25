@@ -1,4 +1,5 @@
 "use client";
+
 import { motion } from "framer-motion";
 import { useState } from "react";
 import {
@@ -8,6 +9,7 @@ import {
   FaLinkedin,
   FaGithub,
   FaTwitter,
+  FaFacebook,
   FaPaperPlane,
   FaCheckCircle,
 } from "react-icons/fa";
@@ -40,27 +42,40 @@ const Contact = () => {
     {
       icon: FaEnvelope,
       label: "Email",
-      value: "hello@johndoe.com",
-      link: "mailto:hello@johndoe.com",
+      value: "mdnuruddinosman@gmail.com",
+      link: "mailto:mdnuruddinosman@gmail.com",
     },
     {
       icon: FaPhone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
+      value: "+8801641657427",
+      link: "",
     },
     {
       icon: FaMapMarkerAlt,
       label: "Location",
-      value: "Dhaka, Bangladesh",
+      value: "Mohakhali, Dhaka, Bangladesh",
       link: "#",
     },
   ];
 
   const socialLinks = [
-    { icon: FaLinkedin, label: "LinkedIn", link: "#" },
-    { icon: FaGithub, label: "GitHub", link: "#" },
-    { icon: FaTwitter, label: "Twitter", link: "#" },
+    {
+      icon: FaLinkedin,
+      label: "LinkedIn",
+      link: "https://www.linkedin.com/in/nuruddinos/",
+    },
+    {
+      icon: FaGithub,
+      label: "GitHub",
+      link: "https://github.com/nuruddin-osman",
+    },
+    { icon: FaTwitter, label: "Twitter", link: "https://x.com/NuruddinDev" },
+    {
+      icon: FaFacebook,
+      label: "Facebook",
+      link: "https://www.facebook.com/mnos365",
+    },
   ];
 
   return (
@@ -85,9 +100,9 @@ const Contact = () => {
                 Let&apos;s Talk
               </h3>
               <p className="text-dark-blue/80 text-base md:text-lg leading-relaxed mb-8">
-                I&apos;m currently available for freelance work and full-time
-                opportunities. Whether you have a project in mind or just want
-                to say hello, I&apos;d love to hear from you.
+                I&apos;m currently available for full-time opportunities.
+                Whether you have a project in mind or just want to say hello,
+                I&apos;d love to hear from you.
               </p>
             </div>
 
@@ -127,6 +142,7 @@ const Contact = () => {
                   <motion.a
                     key={index}
                     href={social.link}
+                    target="_blank"
                     data-aos="zoom-in"
                     data-aos-delay={index * 100 + 300}
                     whileHover={{ scale: 1.2, y: -5 }}
@@ -140,7 +156,7 @@ const Contact = () => {
           </motion.div>
 
           {/* Contact Form */}
-          <motion.div data-aos="fade-left">
+          <motion.div data-aos="fade-up">
             <form
               onSubmit={handleSubmit}
               className="bg-white p-5 md:p-8 rounded-2xl shadow-xl"
