@@ -2,8 +2,11 @@
 import { motion } from "framer-motion";
 import { FaCode, FaUsers, FaRocket } from "react-icons/fa";
 import { AiFillBank } from "react-icons/ai";
+import { useEffect, useState } from "react";
 
 const About = () => {
+  const [aosAnimation, setAosAnimation] = useState("fade-left");
+
   const stats = [
     { icon: FaCode, number: "10+", text: "Projects Completed" },
     { icon: FaUsers, number: "0+", text: "Happy Clients" },
@@ -16,6 +19,14 @@ const About = () => {
     { name: "Backend Development", level: 88 },
     { name: "Problem Solving", level: 90 },
   ];
+
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setAosAnimation("fade-up");
+    } else {
+      setAosAnimation("fade-left");
+    }
+  }, []);
 
   return (
     <section id="about" className="section bg-light-cream py-10 md:py-20">
@@ -87,7 +98,10 @@ const About = () => {
           </motion.div>
 
           {/* Right Content - Stats */}
-          <motion.div data-aos="fade-left" className="grid grid-cols-2 gap-6">
+          <motion.div
+            data-aos={aosAnimation}
+            className="grid grid-cols-2 gap-6"
+          >
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.text}

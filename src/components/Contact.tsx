@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   FaEnvelope,
   FaPhone,
@@ -15,6 +15,7 @@ import {
 } from "react-icons/fa";
 
 const Contact = () => {
+  const [aosAnimation, setAosAnimation] = useState("fade-left");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -58,6 +59,14 @@ const Contact = () => {
       link: "#",
     },
   ];
+
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setAosAnimation("fade-up");
+    } else {
+      setAosAnimation("fade-left");
+    }
+  }, []);
 
   const socialLinks = [
     {
@@ -156,7 +165,7 @@ const Contact = () => {
           </motion.div>
 
           {/* Contact Form */}
-          <motion.div data-aos="fade-up">
+          <motion.div data-aos={aosAnimation}>
             <form
               onSubmit={handleSubmit}
               className="bg-white p-5 md:p-8 rounded-2xl shadow-xl"

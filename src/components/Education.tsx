@@ -1,9 +1,11 @@
 "use client";
 import { Certification, Educations } from "@/types";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { FaGraduationCap, FaAward } from "react-icons/fa";
 
 const Education = () => {
+  const [aosAnimation, setAosAnimation] = useState("fade-left");
   const educationData: Educations[] = [
     {
       icon: FaGraduationCap,
@@ -37,6 +39,14 @@ const Education = () => {
       icon: FaGraduationCap,
     },
   ];
+
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setAosAnimation("fade-up");
+    } else {
+      setAosAnimation("fade-left");
+    }
+  }, []);
 
   return (
     <section id="education" className="section py-10 md:py-20 bg-white">
@@ -119,7 +129,7 @@ const Education = () => {
           </motion.div>
 
           {/* Certifications */}
-          <motion.div data-aos="fade-left">
+          <motion.div data-aos={aosAnimation}>
             <h3 className="font-bold text-dark-blue mb-8 flex items-center text-lg md:text-2xl">
               <FaAward className="mr-3 text-orange" />
               Certifications

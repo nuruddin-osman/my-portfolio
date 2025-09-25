@@ -14,8 +14,10 @@ import {
 } from "react-icons/si";
 import Image from "next/image";
 import Banner from "@/assets/images/banner.png";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [aosAnimation, setAosAnimation] = useState("fade-left");
   const techIcons = [
     SiJavascript,
     SiTypescript,
@@ -25,6 +27,14 @@ const Hero = () => {
     SiExpress,
     SiLaravel,
   ];
+
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setAosAnimation("fade-up");
+    } else {
+      setAosAnimation("fade-left");
+    }
+  }, []);
 
   return (
     <section
@@ -148,7 +158,7 @@ const Hero = () => {
 
           {/* Hero Image/Graphic */}
           <motion.div
-            data-aos="fade-left"
+            data-aos={aosAnimation}
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
