@@ -77,7 +77,7 @@ const Hero = () => {
             >
               Hi, I&apos;m{" "}
               <span className="text-orange relative">
-                Md Nuriddin Osman
+                Md Nuruddin Osman
                 <motion.span
                   className="absolute -bottom-2 left-0 w-full h-1 bg-orange"
                   initial={{ scaleX: 0 }}
