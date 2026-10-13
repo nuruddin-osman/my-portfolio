@@ -33,6 +33,28 @@ const Experience = () => {
       icon: SiReact,
       link: "#",
     },
+    {
+      id: 2,
+      title: "Junior Instructor",
+      company: "Hajigonj Polytechnic Institute",
+      type: "Full-time",
+      duration: "July-2026 - Running",
+      location: "On-site",
+      description: [
+        "Teaching technical subjects and guiding students in practical lab sessions at Hajigonje Polytechnic Institute",
+        "Preparing students for programming, web development, and technical problem-solving",
+        "Developing and practicing modern web applications using React.js and mext.js ",
+        "Applying practical software development knowledge to support students technical learning",
+      ],
+      technologies: ["Programming in C", "Python", "Java Programming"],
+      achievements: [
+        "Currently working as a Junior Instructor at Hajigonj Polytechnic Institute",
+        "Gaining experience in technical education, student mentoring, and practical learning",
+        "Strengthening web development skills through hands-on coding and project development",
+      ],
+      icon: SiReact,
+      link: "#",
+    },
   ];
 
   return (

@@ -13,7 +13,7 @@ import {
   SiLaravel,
 } from "react-icons/si";
 import Image from "next/image";
-import Banner from "@/assets/images/banner.png";
+import Banner from "@/assets/images/NuruddinSir.png";
 import { useEffect, useState } from "react";
 
 const Hero = () => {
@@ -144,7 +144,7 @@ const Hero = () => {
               </motion.a>
 
               <motion.a
-                href="/Nuruddin-MERN-Stack.pdf"
+                href="/MD_Nuruddin_Osman_Resume_professional.pdf"
                 download
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
