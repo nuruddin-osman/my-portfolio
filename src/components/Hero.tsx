@@ -164,7 +164,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="relative w-80 h-80 mx-auto">
+            <div className="relative w-96 h-96 mx-auto">
               {/* Main Avatar */}
               <motion.div className="w-full h-full bg-gradient-to-br from-orange to-dark-blue rounded-2xl flex items-center justify-center shadow-2xl animate-float overflow-hidden">
                 <Image
